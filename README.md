@@ -3,7 +3,8 @@
 > Projeto Fullstack desenvolvido para gerenciar o inventário de equipamentos (Notebooks, Servidores) de uma empresa.
 
 ## 📸 Demonstração
-<image src="image.png"></image>
+
+![Tela do Sistema](./assets/demo.png)
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -52,8 +53,8 @@ Durante o desenvolvimento, foquei em resolver problemas reais de arquitetura:
 
 ### Passo a passo
 
-1. **Clone o repositório**
 ```bash
+1. **Clone o repositório**
    git clone [https://github.com/SEU-USUARIO/asset-manager.git](https://github.com/SEU-USUARIO/asset-manager.git)
 
 
