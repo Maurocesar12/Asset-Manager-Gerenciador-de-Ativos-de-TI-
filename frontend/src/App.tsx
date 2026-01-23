@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import './App.css';
 import { 
   Container, Typography, Table, TableBody, TableCell, TableContainer, 
   TableHead, TableRow, Paper, Button, Dialog, DialogTitle, 
@@ -103,20 +103,20 @@ function App() {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: '2rem' }}>
-      
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-        <Typography variant="h4" component="h1" style={{ fontWeight: 'bold', color: '#1976d2' }}>
+      <>
+      <div className="app-header">
+        <Typography variant="h4" component="h1" className="app-title">
           📦 Gerenciador de Ativos
         </Typography>
         <Button variant="contained" color="primary" startIcon={<AddIcon />} onClick={handleOpen}>
           Novo Equipamento
         </Button>
       </div>
-
+      
+      <Container maxWidth="lg" className="app-container">
       <TableContainer component={Paper} elevation={3}>
         <Table>
-          <TableHead style={{ backgroundColor: '#f5f5f5' }}>
+          <TableHead className="table-head">
             <TableRow>
               <TableCell><strong>ID</strong></TableCell>
               <TableCell><strong>Hostname</strong></TableCell>
@@ -178,8 +178,8 @@ function App() {
           </Button>
         </DialogActions>
       </Dialog>
-
     </Container>
+    </>
   );
 }
 
