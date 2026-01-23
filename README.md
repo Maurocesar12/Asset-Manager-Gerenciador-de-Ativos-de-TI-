@@ -4,7 +4,7 @@
 
 ## 📸 Demonstração
 
-![Tela do Sistema](./assets/demo.png)
+![Tela do Sistema](./assets/image_01.png)
 
 ## 🚀 Tecnologias Utilizadas
 
