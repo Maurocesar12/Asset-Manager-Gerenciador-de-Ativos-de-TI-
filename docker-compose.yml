@@ -1,4 +1,4 @@
-version: '3.8'
+version: '4.6'
 
 services:
   # O Banco de Dados
@@ -7,9 +7,9 @@ services:
     container_name: asset_manager_db
     restart: always
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password123
-      POSTGRES_DB: inventory_db
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
