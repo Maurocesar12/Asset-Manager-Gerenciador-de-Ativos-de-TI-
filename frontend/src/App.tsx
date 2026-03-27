@@ -39,7 +39,7 @@ function App() {
 
   const fetchAssets = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/assets');
+      const response = await axios.get('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com');
       setAssets(response.data);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
@@ -74,10 +74,10 @@ function App() {
     try {
       if (editingId) {
         // Se tem ID, é ATUALIZAÇÃO (PUT)
-        await axios.put(`http://localhost:3001/assets/${editingId}`, formData);
+        await axios.put('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets/${editingId}', formData);
       } else {
         // Se não tem ID, é CRIAÇÃO (POST)
-        await axios.post('http://localhost:3001/assets', formData);
+        await axios.post('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets', formData);
       }
       
       fetchAssets(); // Atualiza a tabela
@@ -93,7 +93,7 @@ function App() {
     const confirmDelete = window.confirm("Tem certeza que deseja excluir este equipamento?");
     if (confirmDelete) {
       try {
-        await axios.delete(`http://localhost:3001/assets/${id}`);
+        await axios.delete(`https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets/${id}`);
         fetchAssets();
       } catch (error) {
         console.error("Erro ao deletar:", error);
