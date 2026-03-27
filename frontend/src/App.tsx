@@ -39,7 +39,7 @@ function App() {
 
   const fetchAssets = async () => {
     try {
-      const response = await axios.get('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com');
+      const response = await axios.get('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets');
       setAssets(response.data);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
@@ -74,7 +74,7 @@ function App() {
     try {
       if (editingId) {
         // Se tem ID, é ATUALIZAÇÃO (PUT)
-        await axios.put('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets/${editingId}', formData);
+        await axios.put(`https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets/${editingId}`, formData);
       } else {
         // Se não tem ID, é CRIAÇÃO (POST)
         await axios.post('https://asset-manager-gerenciador-de-ativos-de-ti.onrender.com/assets', formData);
